@@ -1,0 +1,358 @@
+/*============================
+        RESET
+=============================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(#000000, #564ADE, #6155F5, #6D7CFF);
+    color: white;
+}
+
+/*============================
+        HEADER / MENU
+=============================*/
+
+header {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+header img {
+    width: 45px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+header a:hover {
+    color: #6D7CFF;
+    transform: scale(1.1);
+}
+
+/*============================
+          SESSÃO SOBRE
+=============================*/
+
+#SOBRE {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    gap: 40px;
+}
+
+#SOBRE img {
+    width: 180px;
+}
+
+.sobre_Mim {
+    background: #000;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 550px;
+    text-align: center;
+}
+
+/*============================
+          PORTFÓLIO
+=============================*/
+
+#PORTFOLIO {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#PORTFOLIO > div {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#PORTFOLIO > div > div {
+    background: #fff;
+    color: black;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 12px #000;
+    transition: 0.3s;
+}
+
+#PORTFOLIO > div > div:hover {
+    transform: scale(1.05);
+}
+
+#PORTFOLIO img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#PORTFOLIO a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #6D7CFF;
+    font-weight: bold;
+}
+
+/*============================
+            SKILLS
+=============================*/
+
+#SKILLS {
+    padding: 60px 0;
+    text-align: center;
+}
+
+#SKILLS > div {
+    width: 80%;
+    margin: auto;
+}
+
+.skill-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 25px;
+}
+
+.skill-row h3 {
+    text-align: left;
+    margin-left: 5px;
+}
+
+/* Barra base */
+.skill-bar {
+    width: 100%;
+    height: 22px;
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Preenchimentos */
+.HTML .skill-bar::before {
+    content: "";
+    width: 95%;
+    height: 100%;
+    display: block;
+    background: white;
+}
+
+.CSS .skill-bar::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    display: block;
+    background: white;
+}
+
+.JavaScript .skill-bar::before {
+    content: "";
+    width: 15%;
+    height: 100%;
+    display: block;
+    background: white;
+}
+
+/*============================
+            CONTATO
+=============================*/
+
+#CONTATO {
+    background: #000; /* fundo preto da seção inteira */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contato-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 80%;
+    margin: auto;
+}
+
+/* LOCALIZAÇÃO À ESQUERDA */
+.localizacao {
+    background: #d9d9d9;
+    color: black;
+    width: 320px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center; /* centralizar texto */
+}
+
+/* FORMULÁRIO À DIREITA */
+form {
+    background: #d9d9d9;
+    color: black;
+    width: 350px;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: #6D7CFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #564ADE;
+}
+
+/*============================
+            FOOTER
+=============================*/
+
+footer {
+    background: linear-gradient(#6D7CFF, #6155F5, #564ADE, #000000);
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+/* ===========================================
+   RESPONSIVIDADE PARA TABLETS (ATÉ 900px)
+=========================================== */
+@media (max-width: 900px) {
+
+    /* SOBRE */
+    #SOBRE {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    #SOBRE img {
+        width: 150px;
+    }
+
+    /* PORTFOLIO */
+    #PORTFOLIO > div {
+        padding: 0 20px;
+    }
+
+    /* CONTATO */
+    .contato-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .localizacao, form {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+/* ===========================================
+   RESPONSIVIDADE PARA CELULARES (ATÉ 600px)
+=========================================== */
+@media (max-width: 600px) {
+
+    /* MENU */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    header a {
+        font-size: 18px;
+    }
+
+    /* SOBRE */
+    #SOBRE {
+        padding: 30px 10px;
+        gap: 25px;
+    }
+
+    #SOBRE img {
+        width: 130px;
+    }
+
+    .sobre_Mim {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* PORTFOLIO */
+    #PORTFOLIO > div > div {
+        width: 85%;
+        max-width: 260px;
+    }
+
+    /* SKILLS */
+    #SKILLS > div {
+        width: 95%;
+    }
+
+    .skill-row h3 {
+        font-size: 18px;
+    }
+
+    .skill-bar {
+        height: 18px;
+    }
+
+    /* CONTATO */
+    .contato-wrapper {
+        width: 95%;
+        gap: 25px;
+    }
+
+    .localizacao, form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 15px;
+    }
+
+    form button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+}
